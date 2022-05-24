@@ -308,7 +308,6 @@ main > div{
     }
 
     .nav-list {
-        display: none;
         position: absolute;
         top: 13.8vh;
         left: 0;
@@ -319,11 +318,18 @@ main > div{
         align-items: center;  
         justify-content: space-around;
         z-index: 999;
+        transform: translateX(-100%);
+        transition: 0.4s ease-in ;
+    }
+
+    .nav-list.active{
+        transform: translateX(0);
     }
      
     .mobile-menu {
         display: block;
         margin: 0 30px;
+        cursor: pointer;
     }
 
     .logo{
@@ -355,12 +361,12 @@ main > div{
     }
 
     .institucional ul li{
-        width: 50%;
+        width: 100%;
         margin: 0 auto;
     }
 
     .mid{
-        margin: 0 20px;
+        margin: 20px 0;
     }
 
     .mission{
@@ -368,7 +374,11 @@ main > div{
     }
   }
 
+
   /*********************************************************************************/
+  
+
+
 
   .footer-dark { 
     margin-top: 10px;
@@ -480,10 +490,10 @@ main > div{
     margin-top: -60px;
 }   
 .img {
-    margin-top: -100px;
-    margin-left: -190px;
-    width: 380px;
-    height: 200px;
+    margin-top: -30%;
+    margin-left: -40%;
+    width: 80%;
+    height: 60%;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -551,6 +561,8 @@ main > div{
     cursor: pointer;
     color: #fff;
     transition: 0.7s;
+    right:0;
+    top:0;
 }
 .left:hover{
     opacity: 0.7;
@@ -574,3 +586,13 @@ input{
     top: 0;
      left: -200px;
 }
+
+@media (min-width:520px) {
+    .img{
+        margin-top: -125px;
+        margin-left: -175px;
+        width: 350px;
+        height: 250px;
+        
+    }
+  }
